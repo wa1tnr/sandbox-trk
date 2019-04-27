@@ -1,4 +1,4 @@
-/* Sat Apr 27 18:10:05 UTC 2019 */
+/* Sat Apr 27 18:12:07 UTC 2019 */
 
 /* demo of setup() and loop() for Arduino */
 
@@ -8,8 +8,8 @@
 /* gpio setup/initialization */
 
 #define LED 13
-#define BLINK_TIME_MS 800
-#define BLINK_OFF_TIME_MS 2200
+#define BLINK_TIME_MS 200
+#define BLINK_OFF_TIME_MS 600
 
 void gpio_init() {
     pinMode(LED, OUTPUT);
