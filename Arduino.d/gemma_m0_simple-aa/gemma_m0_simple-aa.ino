@@ -1,4 +1,6 @@
-/* Sat Apr 27 18:41:59 UTC 2019 */
+/* Sat Apr 27 18:53:44 UTC 2019 */
+
+/* more false edits */
 
 /* False Edits - endgame already known
    An attempt is made to structure the
@@ -32,6 +34,11 @@ void blink() {
     delay(BLINK_OFF_TIME_MS);
 }
 
+/* Hold for Serial Monitor connection */
+void waitfor_serial() {
+}
+
+
 /* Arduino main setup and loop */
 
 void setup() {
@@ -40,6 +47,8 @@ void setup() {
     // TODO: a waitfor style delay goes here,
     // so we catch the very first message
     // printed to the Serial Monitor
+
+    waitfor_serial(); // empty
 
     Serial.println("Simple program begins now.");
     gpio_init();
