@@ -1,8 +1,12 @@
-/* 27 April 17:41 UTC */
+/* 27 April 18:04 UTC */
 
 /* gpio setup/initialization */
 
+#define LED 13
+
 void gpio_init() {
+    pinMode(LED, OUTPUT);
+    digitalWrite(LED, 0);
 }
 
 /* Arduino main setup and loop */
