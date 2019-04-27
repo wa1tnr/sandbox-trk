@@ -1,4 +1,4 @@
-/* Sat Apr 27 18:12:07 UTC 2019 */
+/* Sat Apr 27 18:29:57 UTC 2019 */
 
 /* demo of setup() and loop() for Arduino */
 
@@ -8,12 +8,21 @@
 /* gpio setup/initialization */
 
 #define LED 13
-#define BLINK_TIME_MS 200
-#define BLINK_OFF_TIME_MS 600
+#define BLINK_TIME_MS 44
+#define BLINK_OFF_TIME_MS 330
 
+/* initialize gpio to drive onboard LED, D13 */
 void gpio_init() {
     pinMode(LED, OUTPUT);
     digitalWrite(LED, 0);
+}
+
+/* LED blink */
+void blink() { // empty: top down, bottom up, middle out programming style. ;)
+    digitalWrite(LED, 1);
+    delay(BLINK_TIME_MS);
+    digitalWrite(LED, 0);
+    delay(BLINK_OFF_TIME_MS);
 }
 
 /* Arduino main setup and loop */
@@ -23,14 +32,6 @@ void setup() {
     Serial.println("Simple program begins now.");
     // setup D13 for OUTPUT
     gpio_init();
-}
-
-/* LED blink */
-void blink() { // empty: top down, bottom up, middle out programming style. ;)
-    digitalWrite(LED, 1);
-    delay(BLINK_TIME_MS);
-    digitalWrite(LED, 0);
-    delay(BLINK_OFF_TIME_MS);
 }
 
 void loop() {  // runs forever
