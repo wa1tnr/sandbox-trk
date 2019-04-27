@@ -1,13 +1,4 @@
-/* Sat Apr 27 18:53:44 UTC 2019 */
-
-/* more false edits */
-
-/* False Edits - endgame already known
-   An attempt is made to structure the
-   commits along program development
-   lines, but this is false, as the
-   endgame is already on disk, in a
-   secondary file. ;) */
+/* Sat Apr 27 18:58:59 UTC 2019 */
 
 /* demo of setup() and loop() for Arduino */
 
@@ -34,8 +25,13 @@ void blink() {
     delay(BLINK_OFF_TIME_MS);
 }
 
+void blink_m() { } // empty
+
 /* Hold for Serial Monitor connection */
 void waitfor_serial() {
+    while (!Serial) {
+        blink_m();
+    }
 }
 
 
