@@ -1,4 +1,4 @@
-/* Sat Apr 27 18:58:59 UTC 2019 */
+/* Sat Apr 27 19:13:49 UTC 2019 */
 
 /* demo of setup() and loop() for Arduino */
 
@@ -25,7 +25,11 @@ void blink() {
     delay(BLINK_OFF_TIME_MS);
 }
 
-void blink_m() { } // empty
+/* momentary blink - blinks at 'loop()' iteration rate */
+void blink_m() {
+    digitalWrite(LED, 1); delay(88);
+    digitalWrite(LED, 0); delay(188);
+}
 
 /* Hold for Serial Monitor connection */
 void waitfor_serial() {
@@ -40,11 +44,10 @@ void waitfor_serial() {
 void setup() {
     Serial.begin(38400);
 
-    // TODO: a waitfor style delay goes here,
-    // so we catch the very first message
-    // printed to the Serial Monitor
+    // Catch the very first message
+    // printed to the Serial Monitor:
 
-    waitfor_serial(); // empty
+    waitfor_serial();
 
     Serial.println("Simple program begins now.");
     gpio_init();
