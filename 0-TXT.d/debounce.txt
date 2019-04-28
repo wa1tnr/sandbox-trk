@@ -17,3 +17,16 @@ Sun Apr 28 03:22:11 UTC 2019
   https://forum.arduino.cc/index.php?topic=266132.60  Bounce2 Lib
   http://forum.arduino.cc/index.php?topic=151836.15
 
+Google for:
+
+  latching pushbutton inputs site:arduino.cc
+  reading pushbuttons PCF8574 site:arduino.cc
+
+substitute: MCP23017 for PCF8574
+
+  reading pushbuttons MCP23017 site:arduino.cc
+
+  https://forum.arduino.cc/index.php?topic=423262.0
+
+
+END.
